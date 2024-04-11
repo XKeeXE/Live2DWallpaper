@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="http://schemas.android.com/apk/res/android" package="com.justzht.unilwp.droid.customize">
+  <application>
+    <meta-data android:name="unilwp.logging.verbose" android:value="true" />
+    <meta-data android:name="unilwp.behavior.isolate" android:value="false" />
+    <meta-data android:name="unilwp.version.unity" android:value="0.0.2" />
+    <meta-data android:name="unilwp.behavior.activity.bypass.initial" android:value="true" />
+    <meta-data android:name="unilwp.style.activity.launch.display" android:value="1" />
+    <meta-data android:name="unilwp.behavior.preview.button.settings" android:value="2" />
+  </application>
+</manifest>

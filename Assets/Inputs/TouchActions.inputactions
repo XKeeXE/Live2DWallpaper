@@ -1,0 +1,34 @@
+{
+    "name": "TouchActions",
+    "maps": [
+        {
+            "name": "Touch",
+            "id": "df2e88c4-5f8b-4709-82d4-4788c4bbcb11",
+            "actions": [
+                {
+                    "name": "TouchRemu",
+                    "type": "Button",
+                    "id": "cd2f9bb7-27e5-4d24-a95d-73cdd8207aba",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f4f11247-6f05-436b-99c9-fac2e419e315",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchRemu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

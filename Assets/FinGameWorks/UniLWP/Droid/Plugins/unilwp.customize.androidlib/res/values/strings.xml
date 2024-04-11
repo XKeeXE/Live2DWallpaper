@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <string name="unilwp_author">Author Field</string>
+  <string name="unilwp_description">Description Field</string>
+  <string name="unilwp_context_uri">http://u3d.as/1QVw</string>
+  <string name="unilwp_context_description">Asset Store</string>
+</resources>
