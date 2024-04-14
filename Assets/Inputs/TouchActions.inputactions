@@ -26,6 +26,17 @@
                     "action": "TouchRemu",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45e89ca7-6e03-4824-95a4-25a3809b8227",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchRemu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

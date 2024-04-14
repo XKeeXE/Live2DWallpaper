@@ -34,6 +34,10 @@ public class WallpaperBehaviour : MonoBehaviour
     public UnityEvent ActivateEventUI;
     public UnityEvent ActivateEventRemu; 
 
+    private void Start() {
+        // Input.simulateMouseWithTouches = true;
+    }
+
     private void Awake() {
         _androidPlugins = GetComponent<AndroidPlugins>();
         _bgm = GetComponent<AudioSource>();
@@ -48,10 +52,12 @@ public class WallpaperBehaviour : MonoBehaviour
     private void Update() {
         // If not connected try again to connect to the server x seconds
         // HandleHeartbeat(); // Every X seconds
+        
     }
 
     private void OnEnable() {
         _touchPressAction.performed += OnTouchActionPerformed;
+
         // onDeviceOff += SaveBattery;
 
     }
@@ -59,6 +65,14 @@ public class WallpaperBehaviour : MonoBehaviour
     private void OnDisable() {
         _touchPressAction.performed -= OnTouchActionPerformed;
         // onDeviceOff -= SaveBattery;
+    }
+
+    private Vector3 LookPosition() {
+        var targetPosition = Input.mousePosition;
+
+        targetPosition = (Camera.main.ScreenToViewportPoint(targetPosition) * 2) - Vector3.one;
+
+        return targetPosition;
     }
 
     // Normal touch input

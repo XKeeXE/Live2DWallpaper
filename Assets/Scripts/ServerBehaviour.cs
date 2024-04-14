@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ServerBehaviour : MonoBehaviour
 {
-    [SerializeField] private string _IPAddress = "192.168.0.11";
+    [SerializeField] private string _IPAddress = "localhost";
     [SerializeField] private int _port = 2002;
 	[SerializeField] private NatsukiRemu _natsukiRemu;
 
@@ -37,7 +37,7 @@ public class ServerBehaviour : MonoBehaviour
 	}
 
     private string GetIPAddress() {
-		// https://192.168.0.11:2002
+		// ""
         return "http://" + _IPAddress + ":" + _port;
     }
     

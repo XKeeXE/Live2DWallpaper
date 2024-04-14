@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using FantomLib;
+using System.Numerics;
+using System;
 
 /*
 ナツキ・レム
 
 keypass = agithian@12
 
+Wishful thinking list:
+
 Take functionality of LM
 Connect to a local server where everything about the LLM information gets saved
 Know GPS location
-Subir volume for call depending of weekend day and/or hour
+Adjust volume for call depending of weekend day and/or hour
 open link but in desktop
+synced between desktop, phone, and website
 
 
 AI TODO LIST:
@@ -29,6 +34,8 @@ public class NatsukiRemu : MonoBehaviour {
 
     private int _maxNum, _randindex;
     private string _trigger = "";
+
+    private int voiceIndex = 0;
 
     private AndroidPlugins _androidPlugins;
     private GameObject _remu;
@@ -75,7 +82,7 @@ public class NatsukiRemu : MonoBehaviour {
     /// <returns></returns>
     public string RandomTrigger() {
         _maxNum = _remuAnim.parameterCount-6; // get the max allowed number
-        _randindex = Random.Range(1, _maxNum); // get a random int
+        _randindex = UnityEngine.Random.Range(1, _maxNum); // get a random int
         _trigger = _remuAnim.GetParameter(_randindex).name; // get the animation name trigger
 
         // Only when Phone Section
@@ -96,13 +103,29 @@ public class NatsukiRemu : MonoBehaviour {
     }
 
     public void HandleStartRemuVoice() {
-        _StartRemuVoice ??= StartCoroutine(StartRemuVoice());
+        if (voiceIndex < _remuAudioClip.Length) {
+            // Debug.Log("Remu is on voice clip: " + voiceIndex);
+            _StartRemuVoice ??= StartCoroutine(StartRemuVoice());
+            return;
+        }
+        // Debug.Log("No more voice clips to play as it is set on: No Repeat");
     }
 
     private void RemuVoiceClip() {
         // Grab the audio from somewhere
-        _randindex = Random.Range(0, _remuAudioClip.Length); // Pick random clip from array
+        // Random
+        _randindex = UnityEngine.Random.Range(0, _remuAudioClip.Length); // Pick random clip from array
         _remuAudioSource.clip = _remuAudioClip[_randindex]; // insert the clip
+
+        // No repetition
+        // _remuAudioSource.clip = _remuAudioClip[voiceIndex]; // insert the clip
+        // voiceIndex++;
+
+        // play the first voice clip for the intro
+        if (voiceIndex < 1) {
+            _remuAudioSource.clip = _remuAudioClip[0];
+            voiceIndex++;
+        }
     }
 
     private IEnumerator StartRemuVoice() {
