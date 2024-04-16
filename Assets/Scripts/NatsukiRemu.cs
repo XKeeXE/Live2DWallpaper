@@ -103,11 +103,11 @@ public class NatsukiRemu : MonoBehaviour {
     }
 
     public void HandleStartRemuVoice() {
-        if (voiceIndex < _remuAudioClip.Length) {
-            // Debug.Log("Remu is on voice clip: " + voiceIndex);
-            _StartRemuVoice ??= StartCoroutine(StartRemuVoice());
-            return;
-        }
+        // if (voiceIndex < _remuAudioClip.Length) {
+        //     // Debug.Log("Remu is on voice clip: " + voiceIndex);
+        //     return;
+        // }
+        _StartRemuVoice ??= StartCoroutine(StartRemuVoice());
         // Debug.Log("No more voice clips to play as it is set on: No Repeat");
     }
 
@@ -122,10 +122,10 @@ public class NatsukiRemu : MonoBehaviour {
         // voiceIndex++;
 
         // play the first voice clip for the intro
-        if (voiceIndex < 1) {
-            _remuAudioSource.clip = _remuAudioClip[0];
-            voiceIndex++;
-        }
+        // if (voiceIndex < 1) {
+        //     _remuAudioSource.clip = _remuAudioClip[0];
+        //     voiceIndex++;
+        // }
     }
 
     private IEnumerator StartRemuVoice() {

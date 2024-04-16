@@ -41201,14 +41201,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _remuAudioClip:
-  - {fileID: 8300000, guid: 0df1eea3387f6994db0ef94525f20518, type: 3}
-  - {fileID: 8300000, guid: 69c8a348579d9a24cbbe935b251b29f3, type: 3}
-  - {fileID: 8300000, guid: dfa42215383f1f8469f9a00d771bf8d6, type: 3}
-  - {fileID: 8300000, guid: fc68a66149bcf334189d1d0e505d5f4e, type: 3}
-  - {fileID: 8300000, guid: 3542157b81fe4fb4c871a3f953da5f8f, type: 3}
-  - {fileID: 8300000, guid: 2ad777311db12884680c7dbcc2e18b5b, type: 3}
-  - {fileID: 8300000, guid: 613345e61633dfd408e539c0551fa555, type: 3}
-  - {fileID: 8300000, guid: 9d7277186ed1fdf49a25807f3fc8834a, type: 3}
+  - {fileID: 8300000, guid: d609b87dd1ea216478a2d715ce22244d, type: 3}
+  - {fileID: 8300000, guid: 7041c605ece7ab944a60a4bcfe7c43b9, type: 3}
+  - {fileID: 8300000, guid: 47e564999bfa13441b44469e2ed0feb6, type: 3}
+  - {fileID: 8300000, guid: e824f9aec27bc2844ab1d0e6821d8d6e, type: 3}
   globalTrigger: 
 --- !u!82 &6322944173590891166
 AudioSource:
