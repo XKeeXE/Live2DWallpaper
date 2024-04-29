@@ -35,7 +35,7 @@ public class NatsukiRemu : MonoBehaviour {
     private int _maxNum, _randindex;
     private string _trigger = "";
 
-    private int voiceIndex = 0;
+    // private int voiceIndex = 0;
 
     private AndroidPlugins _androidPlugins;
     private GameObject _remu;

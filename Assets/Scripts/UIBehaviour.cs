@@ -32,31 +32,15 @@ public class UIBehaviour : MonoBehaviour
         #endif
     }
 
-    // public string SetAlarmTime(string inputDayOfWeek, string inputTime) {
-    //     return _alarmList[0];
-    // }
-
-    // public void SetDayOfTheWeekButton(int dayOfTheWeek) {
-    //     if (_dayOfTheWeekList.Contains(dayOfTheWeek)) {
-    //         _dayOfTheWeekList.Remove(dayOfTheWeek);
-    //     } else {
-    //         _dayOfTheWeekList.Add(dayOfTheWeek);
-    //     }
-    // }
-
-    // public void test() {
-    //     FantomLib.AndroidPlugin.ShowTimePickerDialog("0:11", "test1", "test2", "test3", "test4");
-    // }
-
     public void MicControllerButton() {
-        if (micState == true) { // disable speech recognition
+        if (micState == true) { // disable voice clips
             _micImage.color = _colorOff;
             micState = false;
         } else {
             _micImage.color = _colorOn;
             micState = true;
         }
-        Debug.Log("Speech recognition is: " + micState);
+        Debug.Log("Voice clips are: " + micState);
     }
 
     public void AdjustRingVolumeButton() {        
